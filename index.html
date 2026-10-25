@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dev Maru — Creative Portfolio</title>
+<meta name="description" content="Video editing, AI video creation, AI image generation and social media management by Dev Maru.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <a class="brand" href="#top"><span>DM</span> / DEV MARU</a>
+  <div class="navlinks"><a href="#work">Work</a><a href="#ai-video">AI Works</a><a href="#ai-images">AI Images</a><a href="#services">Services</a><a href="#contact">Contact</a></div>
+  <div class="navright"><a class="btn" id="navInstagram" href="https://instagram.com/imdevmaru" target="_blank" rel="noreferrer">Instagram ↗</a></div>
+</nav>
+<main id="top">
+<section class="hero">
+  <div>
+    <div class="eyebrow"><span class="dot"></span><span id="heroEyebrow">CREATIVE PORTFOLIO · 2026</span></div>
+    <h1 id="heroTitle">I turn ideas into <em>scroll-stopping</em> content.</h1>
+    <p id="heroBio">I'm Dev Maru — a video editor, AI creator and social media manager helping brands show up with content people remember.</p>
+    <div class="hero-skills">
+      <div class="hero-skill"><span class="skill-icon">▷</span><div><strong>Video Editor</strong><small>Reels · Ads · Vlogs</small></div></div>
+      <div class="hero-skill"><span class="skill-icon">✧</span><div><strong>AI Creator</strong><small>AI Video · AI Images</small></div></div>
+      <div class="hero-skill"><span class="skill-icon">▥</span><div><strong>Social Media Manager</strong><small>Strategy · Content · Growth</small></div></div>
+    </div>
+    <div class="hero-actions"><a class="btn primary" href="#work">Explore my work ↘</a><a class="btn" href="#contact">Let's work together ↗</a></div>
+  </div>
+  <div class="hero-card" id="heroCard">
+    <img id="heroPhoto" class="hero-photo hidden" alt="Dev Maru profile photo">
+    <div class="card-top"><span>INDEPENDENT CREATIVE</span><span>INDIA ↗</span></div>
+    <div class="orbit" id="heroOrbit"><strong id="heroInitials">DM.</strong></div>
+    <div class="card-bottom">
+      <div class="skill"><h3>Video Editor</h3><small>Reels · Ads · Vlogs</small></div>
+      <div class="skill"><h3>AI Creator</h3><small>AI Video · AI Images</small></div>
+      <div class="skill"><h3>Social Media Manager</h3><small>Strategy · Content · Growth</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="clients">
+  <div class="section-head"><div><div class="section-kicker">TRUSTED COLLABORATIONS</div><h2>Worked with<span class="accent-period">.</span></h2></div><div class="section-note">Brands and people I've helped bring their ideas to life.</div></div>
+  <div class="marquee-shell"><div class="marquee-track" id="clientTrack"></div></div>
+</section>
+
+<section class="section" id="work">
+  <div class="section-head"><div><div class="section-kicker">SELECTED PROJECTS</div><h2>Featured work<span class="accent-period">.</span></h2></div><div class="section-note">A moving showcase of edits, campaigns and creative experiments. Hover to pause.</div></div>
+  <div class="marquee-shell has-controls" data-controls-for="featuredTrack"><div class="marquee-controls"><button class="marquee-control" type="button" aria-label="Previous featured projects" data-marquee-direction="-1">‹</button><button class="marquee-control" type="button" aria-label="Next featured projects" data-marquee-direction="1">›</button></div><div class="marquee-track" id="featuredTrack"></div></div>
+</section>
+
+<section class="section" id="ai-video">
+  <div class="section-head"><div><div class="section-kicker">MADE WITH AI</div><h2>Trending AI works<span class="accent-period">.</span></h2></div><div class="section-note">AI-assisted video concepts, product ads and visual stories.</div></div>
+  <div class="marquee-shell reverse has-controls" data-controls-for="aiVideoTrack"><div class="marquee-controls"><button class="marquee-control" type="button" aria-label="Previous AI videos" data-marquee-direction="-1">‹</button><button class="marquee-control" type="button" aria-label="Next AI videos" data-marquee-direction="1">›</button></div><div class="marquee-track" id="aiVideoTrack"></div></div>
+</section>
+
+<section class="section" id="ai-images">
+  <div class="section-head"><div><div class="section-kicker">VISUAL LAB</div><h2>AI image generation<span class="accent-period">.</span></h2></div><div class="section-note">Product visuals, campaign creatives and AI-generated concepts.</div></div>
+  <div class="marquee-shell"><div class="marquee-track" id="aiImageTrack"></div></div>
+</section>
+
+<section class="section" id="services">
+  <div class="section-head"><div><div class="section-kicker">WHAT I DO</div><h2>Creative services<span class="accent-period">.</span></h2></div></div>
+  <div class="services">
+    <div class="service"><span class="num">01 / EDIT</span><h3>Video Editing</h3><p>Reels, product videos, storytelling edits and short-form content.</p></div>
+    <div class="service"><span class="num">02 / GENERATE</span><h3>AI Video Creation</h3><p>AI-powered ad concepts, product showcases and visual experiments.</p></div>
+    <div class="service"><span class="num">03 / CREATE</span><h3>AI Image Generation</h3><p>Product images, campaign visuals and creative assets for brands.</p></div>
+    <div class="service"><span class="num">04 / GROW</span><h3>Social Media Management</h3><p>Content planning, creative direction and consistent brand presence.</p></div>
+  </div>
+</section>
+
+<section class="contact" id="contact"><div><div class="section-kicker">HAVE A PROJECT IN MIND?</div><h2>Let's make something<br>people remember.</h2><p id="contactLine">Available for select projects and brand collaborations.</p><div class="contact-details"><a href="mailto:devislive6@gmail.com">✉ devislive6@gmail.com</a><a href="tel:+919898646764">☎ +91 98986 46764</a></div></div><div class="contact-actions"><a class="btn primary" id="emailButton" href="mailto:devislive6@gmail.com">Email me ↗</a><a class="btn" href="https://wa.me/919898646764" target="_blank" rel="noreferrer">WhatsApp ↗</a><a class="btn" href="tel:+919898646764">Call me ↗</a><a class="btn" id="youtubeButton" href="https://youtube.com/@DevMaruVlogs" target="_blank" rel="noreferrer">YouTube ↗</a></div></section>
+</main>
+<footer><span>© <span id="year"></span> Dev Maru. Made with intention.</span><span>Video Editing · AI Creation · Social Media</span></footer>
+</div>
+
+
+<div id="imageModal" role="dialog" aria-modal="true" aria-label="Portfolio image"><div class="video-modal-panel"><div class="video-modal-top"><div class="video-modal-title" id="imageModalTitle">Portfolio image</div><button class="btn" id="closeImageModal" type="button">Close ✕</button></div><div class="image-modal-content"><img id="imageModalImage" alt=""></div></div></div>
+<div id="videoModal" role="dialog" aria-modal="true" aria-label="Video player"><div class="video-modal-panel"><div class="video-modal-top"><div class="video-modal-title" id="videoModalTitle">Watch project</div><button class="btn" id="closeVideoModal" type="button">Close ✕</button></div><div class="video-modal-content" id="videoModalContent"></div><div class="video-modal-hint" id="videoModalHint">Video player</div><div id="driveFallback"><a class="btn primary" id="openDriveOriginal" href="#" target="_blank" rel="noopener noreferrer">Open video in Google Drive ↗</a><button class="btn" id="retryDriveEmbed" type="button">Retry player</button><div class="drive-note">If Drive itself says “Unable to load video”, the file cannot currently be streamed by Drive. Check sharing access and that Drive has finished processing the video, or host the MP4 on YouTube (Unlisted), Vimeo, or a video CDN for reliable in-page playback.</div></div></div></div>
+<script src="asset-manifest.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

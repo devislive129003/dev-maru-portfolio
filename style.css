@@ -1,0 +1,176 @@
+:root{--bg:#090a0d;--panel:#111319;--panel2:#171a22;--text:#f5f5f7;--muted:#9b9eaa;--line:#272a33;--accent:#b8ff65;--accent2:#8c7bff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+nav{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);gap:20px}.brand{font-weight:850;letter-spacing:-.06em;font-size:22px}.brand span{color:var(--accent)}.navlinks{display:flex;gap:24px;color:#c5c6ce;font-size:13px}.navlinks a:hover{color:var(--accent)}.navright{display:flex;align-items:center;gap:10px}
+nav{position:sticky;top:0;z-index:10;background:var(--bg)}
+.btn{border:1px solid var(--line);background:#171920;color:var(--text);padding:11px 15px;border-radius:999px;cursor:pointer;font-size:12px;font-weight:700;transition:.2s}.btn:hover{transform:translateY(-2px);border-color:var(--accent)}.btn.primary{background:var(--accent);color:#10120d;border-color:var(--accent)}.hero{padding:48px 0 22px;display:grid;grid-template-columns:1fr .98fr;gap:34px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--accent);text-transform:uppercase;letter-spacing:.15em;font-size:10px;font-weight:800}.dot{height:7px;width:7px;background:var(--accent);border-radius:50%;box-shadow:0 0 15px var(--accent)}h1{font-size:clamp(46px,7vw,86px);line-height:.98;letter-spacing:-.075em;margin:21px 0 24px;max-width:750px}h1 em{font-style:normal;color:var(--accent)}.hero p{font-size:16px;line-height:1.8;color:var(--muted);max-width:610px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.hero-card{border:1px solid var(--line);border-radius:24px;background:radial-gradient(circle at 80% 10%,#34304d 0,transparent 40%),linear-gradient(145deg,#191b24,#0d0e12);padding:25px;min-height:560px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}.hero-card:after{content:"DM";font-size:150px;font-weight:900;letter-spacing:-.12em;color:#ffffff08;position:absolute;right:15px;bottom:25px;pointer-events:none}.hero-card.has-photo:after{display:none}.hero-card .hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:23px;z-index:0}.hero-card.has-photo:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#08090a35 0%,#08090a20 40%,#08090ad9 100%);z-index:1;pointer-events:none}.hero-card .card-top,.hero-card .orbit,.hero-card .card-bottom{z-index:2;position:relative}.hero-card.has-photo .orbit{display:none}.hero-card .card-bottom{margin-top:auto}.hero-card.has-photo .card-bottom{margin:0 -25px -25px;padding:70px 18px 18px;background:linear-gradient(180deg,transparent,#08090ae8 38%);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;text-align:center}.hero-card.has-photo .card-bottom .skill{padding:0 10px;min-width:0}.hero-card.has-photo .card-bottom .skill+.skill{border-left:1px solid #ffffff38}.hero-card.has-photo .card-bottom h3{font-size:15px;line-height:1.25;margin:0 0 6px}.hero-card.has-photo .card-bottom small{font-size:11px;line-height:1.4;color:#c1c6d2}.hero-skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:22px 0 0}.hero-skill{display:flex;align-items:center;gap:10px;min-width:0;border:1px solid var(--line);background:linear-gradient(145deg,#111319,#0d0e12);border-radius:15px;padding:12px}.hero-skill .skill-icon{width:38px;height:38px;flex:0 0 38px;border:2px solid var(--accent);border-radius:10px;display:grid;place-items:center;color:var(--accent);font-size:20px}.hero-skill strong{display:block;font-size:12px;line-height:1.25}.hero-skill small{display:block;color:var(--muted);font-size:10px;line-height:1.4;margin-top:4px}.hero-card .orbit{border-color:#ffffff35}.hero-card .orbit:before,.hero-card .orbit:after{display:none}.card-top{display:flex;justify-content:space-between;color:var(--muted);font-size:11px}.orbit{width:120px;height:120px;border:1px solid #ffffff35;border-radius:50%;display:grid;place-items:center;margin:18px auto;position:relative}.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid #ffffff25;border-radius:50%;inset:14px}.orbit:after{inset:-12px;border-style:dashed}.orbit strong{font-size:35px;color:var(--accent);letter-spacing:-.08em}.client-mark img{width:100%;height:100%;object-fit:contain;padding:3px;border-radius:8px}.client-mark{overflow:hidden;flex-shrink:0}.hero-card h3{font-size:21px;letter-spacing:-.04em;margin:0 0 8px}.hero-card small{color:var(--muted)}
+.section{padding:42px 0 32px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:22px}.section-kicker{font-size:10px;color:var(--accent);letter-spacing:.16em;text-transform:uppercase;font-weight:800}.section h2{font-size:clamp(28px,4vw,42px);letter-spacing:-.06em;margin:8px 0 0}.section-note{color:var(--muted);font-size:12px;max-width:300px;line-height:1.6;text-align:right}
+.marquee-shell{overflow:hidden;position:relative;padding:8px 0 22px}.marquee-shell:before,.marquee-shell:after{content:"";position:absolute;top:0;bottom:0;width:70px;z-index:2;pointer-events:none}.marquee-shell:before{left:0;background:linear-gradient(90deg,var(--bg),transparent)}.marquee-shell:after{right:0;background:linear-gradient(270deg,var(--bg),transparent)}.marquee-track{display:flex;align-items:flex-start;width:max-content;gap:14px;animation:scroll 35s linear infinite}.marquee-shell.reverse .marquee-track{animation-direction:reverse}.marquee-shell:hover .marquee-track{animation-play-state:paused}@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.client-pill{height:100px;width:180px;min-width:180px;padding:14px;border:1px solid var(--line);border-radius:15px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden}.client-mark{width:100%;height:100%;display:flex;align-items:center;justify-content:center;overflow:hidden}.client-mark img{display:block;width:100%;height:100%;max-width:152px;max-height:70px;object-fit:contain;object-position:center center;padding:0;background:transparent;border-radius:8px}.client-pill .client-fallback{font-size:11px;color:#666;text-align:center;font-weight:600}
+.work-card{width:225px;flex:0 0 225px;align-self:flex-start;border:1px solid var(--line);background:var(--panel);border-radius:18px;overflow:hidden}.work-card-click{display:block;cursor:pointer}.thumb{width:100%;height:400px;aspect-ratio:9/16;flex:none;background:linear-gradient(135deg,#252837,#101117);position:relative;display:grid;place-items:center;overflow:hidden}.thumb img,.thumb video{display:block;width:100%;height:100%;max-width:100%;max-height:100%;object-fit:cover;position:absolute;inset:0;min-width:0;min-height:0}.thumb .placeholder{font-size:44px;font-weight:900;letter-spacing:-.08em;color:#ffffff25}.play{position:absolute;bottom:13px;right:13px;background:#0b0c10d9;border:1px solid #ffffff30;border-radius:50%;width:37px;height:37px;display:grid;place-items:center;z-index:1}.work-info{padding:15px}.work-info h3{font-size:14px;margin:0 0 6px}.work-info p{font-size:11px;color:var(--muted);margin:0}.tag{font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:9px;display:block}
+.image-card{width:220px;height:220px;aspect-ratio:1/1;flex:0 0 220px;flex-shrink:0;border:1px solid var(--line);border-radius:17px;overflow:hidden;position:relative;background:linear-gradient(145deg,#232737,#111219);display:grid;place-items:center}.image-card img{width:100%;height:100%;object-fit:contain;position:absolute;inset:0;background:#111319}.image-card .placeholder{font-size:34px;color:#ffffff2e;font-weight:900}.image-card span.label{position:absolute;bottom:10px;left:10px;background:#0b0c10d9;border:1px solid #ffffff25;padding:7px 9px;border-radius:7px;font-size:10px}@media(max-width:600px){.image-card{width:180px;height:180px;flex-basis:180px}}
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.service{background:var(--panel);border:1px solid var(--line);padding:22px;border-radius:17px;min-height:145px}.service .num{color:var(--accent);font-size:11px}.service h3{font-size:15px;margin:20px 0 8px}.service p{color:var(--muted);font-size:11px;line-height:1.6;margin:0}
+.contact{margin:65px 0 25px;border:1px solid var(--line);border-radius:25px;background:linear-gradient(120deg,#171a20,#111218);padding:35px;display:flex;align-items:center;justify-content:space-between;gap:25px}.contact h2{font-size:clamp(28px,4vw,42px);letter-spacing:-.06em;margin:8px 0}.contact p{color:var(--muted);font-size:13px}.contact-actions{display:flex;gap:10px;flex-wrap:wrap}.contact-details{display:flex;flex-direction:column;gap:8px;margin-top:16px}.contact-details a{font-size:13px;color:#d9dbe2;overflow-wrap:anywhere}.contact-details a:hover{color:var(--accent)}footer{padding:25px 0 40px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:15px;color:var(--muted);font-size:11px}
+#videoModal{position:fixed;inset:0;z-index:60;background:#000e;display:none;align-items:center;justify-content:center;padding:20px}#videoModal.open{display:flex}.video-modal-panel{width:min(430px,100%);background:#101116;border:1px solid #383b45;border-radius:16px;overflow:hidden;box-shadow:0 20px 80px #000b}.video-modal-top{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;gap:12px}.video-modal-title{font-size:13px;font-weight:750}.video-modal-content{aspect-ratio:9/16;width:100%;max-height:calc(100vh - 120px);background:#000;display:grid;place-items:center}.video-modal-content video,.video-modal-content iframe{width:100%;height:100%;border:0;object-fit:contain}.video-modal-hint{padding:10px 16px;color:var(--muted);font-size:11px;line-height:1.55}#driveFallback{display:none;padding:0 16px 15px;gap:8px;flex-wrap:wrap}#driveFallback.show{display:flex}#driveFallback .btn{font-size:11px}#driveFallback .drive-note{width:100%;font-size:11px;color:var(--muted);line-height:1.5}.thumb{cursor:pointer;aspect-ratio:9/16;height:auto;min-height:0;max-height:none;overflow:hidden;position:relative}.work-card{height:auto;align-self:flex-start;overflow:hidden}.thumb img,.thumb video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}.thumb video{pointer-events:none}.thumb .play{pointer-events:none}@media(max-width:600px){#videoModal{padding:8px}.video-modal-panel{border-radius:10px}}
+.hidden{display:none!important}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:38px;gap:25px}.hero-card{min-height:480px}.hero-skills{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.hero-skill{padding:9px;gap:7px}.hero-skill .skill-icon{width:30px;height:30px;flex-basis:30px;font-size:16px}.hero-skill strong{font-size:10px}.hero-skill small{font-size:9px}.navlinks{display:none}.services{grid-template-columns:repeat(2,1fr)}.section-note{display:none}.contact{align-items:flex-start;flex-direction:column}.work-card{width:200px;flex-basis:200px}.thumb{height:355.56px;aspect-ratio:9/16}}
+@media(max-width:480px){.wrap{width:calc(100% - 28px)}nav{height:65px}.hero{padding:34px 0 24px}h1{font-size:clamp(42px,12vw,52px)}.hero-card{min-height:420px;padding:18px}.hero-card.has-photo .card-bottom{margin:0 -18px -18px;padding:58px 6px 14px}.hero-card.has-photo .card-bottom h3{font-size:11px}.hero-card.has-photo .card-bottom small{font-size:9px}.hero-skills{grid-template-columns:1fr;gap:8px}.hero-skill{padding:10px 12px}.hero-skill strong{font-size:12px}.hero-skill small{font-size:10px}.services{grid-template-columns:1fr 1fr;gap:8px}.service{padding:15px}.client-pill{width:150px;min-width:150px;height:72px;padding:9px}.client-mark img{max-width:126px;max-height:52px}.image-card{width:175px;height:190px}.contact{padding:23px}}
+
+/* FIXED PORTRAIT REEL FRAME: every video/image preview stays 9:16. Video previews stay paused to avoid showing random transition frames; the full source is centered without cropping.
+   The frame dimensions are independent of the source media ratio. */
+.work-card{width:225px!important;flex:0 0 225px!important;align-self:flex-start!important;height:auto!important;min-height:0!important;display:block!important;overflow:hidden!important}
+.work-card-click{display:block!important;width:100%!important;min-width:0!important}
+.work-card .thumb{display:block!important;position:relative!important;width:100%!important;height:400px!important;min-height:400px!important;max-height:400px!important;aspect-ratio:9 / 16!important;flex:none!important;overflow:hidden!important;padding:0!important}
+.work-card .thumb::before{content:none!important;display:none!important;padding:0!important}
+.work-card .thumb img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;min-width:0!important;min-height:0!important;object-fit:contain!important;object-position:center center!important;background:#090a0d!important}.work-card .thumb video{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;min-width:0!important;min-height:0!important;object-fit:contain!important;object-position:center center!important;background:#000!important}
+.work-card .work-info{display:block!important;flex:none!important;height:auto!important;min-height:72px!important}
+@media(max-width:800px){.work-card{width:200px!important;flex-basis:200px!important}.work-card .thumb{height:355.56px!important;min-height:355.56px!important;max-height:355.56px!important;aspect-ratio:9 / 16!important}}
+
+
+/* MANUAL CAROUSEL CONTROLS + CENTERED FULL-FRAME PREVIEWS */
+/* Direct-video cards seek to a stable frame instead of showing the opening transition frame. */
+.marquee-shell.has-controls{padding-left:48px;padding-right:48px}
+.marquee-controls{position:absolute;inset:0;display:flex;align-items:center;justify-content:space-between;pointer-events:none;z-index:5}
+.marquee-control{pointer-events:auto;width:38px;height:38px;border-radius:50%;border:1px solid #ffffff35;background:#101116eF;color:#f5f5f7;display:grid;place-items:center;cursor:pointer;font-size:22px;line-height:1;box-shadow:0 4px 18px #0007;transition:transform .18s,border-color .18s,background .18s}
+.marquee-control:hover{transform:scale(1.08);border-color:var(--accent);background:#1b1e26}
+.marquee-control:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.accent-period{color:var(--accent)}
+
+
+
+.work-card .thumb img,.work-card .thumb video{object-fit:contain!important;object-position:center center!important;background:#08090c!important}
+#imageModal{position:fixed;inset:0;z-index:70;background:#000e;display:none;align-items:center;justify-content:center;padding:20px}#imageModal.open{display:flex}#imageModal .video-modal-panel{width:auto;max-width:min(900px,100%)}.image-modal-content{display:grid;place-items:center;padding:0 12px 12px;max-height:calc(100vh - 70px)}.image-modal-content img{display:block;max-width:min(860px,90vw);max-height:calc(100vh - 110px);width:auto;height:auto;object-fit:contain}
+@media(max-width:600px){.marquee-shell.has-controls{padding-left:34px;padding-right:34px}.marquee-control{width:30px;height:30px;font-size:18px}}
+
+
+/* FINAL REEL CARD FRAME FIX: fixed 9:16 card; source aspect ratio cannot change card dimensions. */
+#featuredTrack .work-card, #aiVideoTrack .work-card {
+  width:225px !important; flex:0 0 225px !important; height:auto !important;
+  min-height:0 !important; align-self:flex-start !important; overflow:hidden !important;
+  display:block !important; contain:layout style !important;
+}
+#featuredTrack .work-card-click, #aiVideoTrack .work-card-click {display:block !important; width:100% !important; min-width:0 !important;}
+#featuredTrack .work-card .thumb, #aiVideoTrack .work-card .thumb {
+  display:block !important; position:relative !important; width:100% !important;
+  height:400px !important; min-height:400px !important; max-height:400px !important;
+  aspect-ratio:9 / 16 !important; overflow:hidden !important; padding:0 !important;
+  contain:layout paint !important;
+}
+#featuredTrack .work-card .thumb img, #aiVideoTrack .work-card .thumb img,
+#featuredTrack .work-card .thumb video, #aiVideoTrack .work-card .thumb video {
+  display:block !important; position:absolute !important; inset:0 !important;
+  width:100% !important; height:100% !important; min-width:0 !important; min-height:0 !important;
+  max-width:none !important; max-height:none !important; object-fit:cover !important;
+  object-position:center center !important; background:#08090c !important;
+}
+#featuredTrack .work-card .thumb .placeholder, #aiVideoTrack .work-card .thumb .placeholder {
+  position:absolute !important; inset:0 !important; width:100% !important; height:100% !important;
+  display:grid !important; place-items:center !important;
+}
+#featuredTrack .work-card .work-info, #aiVideoTrack .work-card .work-info {
+  display:block !important; position:relative !important; height:auto !important;
+  min-height:72px !important; padding:15px !important; overflow-wrap:anywhere;
+}
+@media(max-width:800px) {
+  #featuredTrack .work-card, #aiVideoTrack .work-card {width:200px !important; flex-basis:200px !important;}
+  #featuredTrack .work-card .thumb, #aiVideoTrack .work-card .thumb {
+    height:355.56px !important; min-height:355.56px !important; max-height:355.56px !important;
+  }
+}
+
+
+/* FINAL VERIFIED STATIC LAYOUT OVERRIDE: fixed 9:16 reel cards independent of media metadata. */
+#featuredTrack, #aiVideoTrack { align-items:flex-start !important; }
+#featuredTrack > .work-card, #aiVideoTrack > .work-card {
+  box-sizing:border-box !important; display:block !important;
+  width:225px !important; min-width:225px !important; max-width:225px !important;
+  flex:0 0 225px !important; flex-shrink:0 !important; align-self:flex-start !important;
+  height:auto !important; min-height:0 !important; max-height:none !important;
+  overflow:hidden !important; contain:layout paint !important;
+}
+#featuredTrack > .work-card > .work-card-click, #aiVideoTrack > .work-card > .work-card-click {
+  display:block !important; width:100% !important; min-width:0 !important;
+}
+#featuredTrack .work-card .thumb, #aiVideoTrack .work-card .thumb {
+  box-sizing:border-box !important; display:block !important; position:relative !important;
+  width:100% !important; height:400px !important; min-height:400px !important; max-height:400px !important;
+  aspect-ratio:9 / 16 !important; padding:0 !important; margin:0 !important;
+  overflow:hidden !important; contain:strict !important; isolation:isolate !important;
+}
+#featuredTrack .work-card .thumb img, #featuredTrack .work-card .thumb video,
+#aiVideoTrack .work-card .thumb img, #aiVideoTrack .work-card .thumb video {
+  box-sizing:border-box !important; display:block !important; position:absolute !important;
+  inset:0 !important; width:100% !important; height:100% !important;
+  min-width:0 !important; min-height:0 !important; max-width:100% !important; max-height:100% !important;
+  object-fit:contain !important; object-position:center center !important;
+  border:0 !important; margin:0 !important; padding:0 !important; background:#08090c !important;
+}
+#featuredTrack .work-card .thumb .play, #aiVideoTrack .work-card .thumb .play { z-index:2 !important; }
+#featuredTrack .work-card .work-info, #aiVideoTrack .work-card .work-info {
+  box-sizing:border-box !important; display:block !important; position:relative !important;
+  width:100% !important; height:auto !important; min-height:72px !important; overflow-wrap:anywhere !important;
+}
+@media (max-width:800px) {
+  #featuredTrack > .work-card, #aiVideoTrack > .work-card {
+    width:200px !important; min-width:200px !important; max-width:200px !important;
+    flex:0 0 200px !important;
+  }
+  #featuredTrack .work-card .thumb, #aiVideoTrack .work-card .thumb {
+    height:355.5556px !important; min-height:355.5556px !important; max-height:355.5556px !important;
+  }
+}
+
+
+
+/* HARD STOP FIX: keep every Featured Work / Trending AI card bounded */
+#featuredTrack, #aiVideoTrack { align-items:flex-start !important; }
+#featuredTrack > .work-card, #aiVideoTrack > .work-card,
+#featuredTrack .work-card, #aiVideoTrack .work-card {
+  box-sizing:border-box !important;
+  height:490px !important; min-height:490px !important; max-height:490px !important;
+  overflow:hidden !important; align-self:flex-start !important; flex-shrink:0 !important;
+  display:block !important; position:relative !important;
+}
+#featuredTrack .work-card-click, #aiVideoTrack .work-card-click {
+  box-sizing:border-box !important; display:block !important; width:100% !important;
+  height:100% !important; min-height:0 !important; overflow:hidden !important;
+}
+#featuredTrack .work-card .thumb, #aiVideoTrack .work-card .thumb {
+  box-sizing:border-box !important; position:relative !important; display:block !important;
+  width:100% !important; height:400px !important; min-height:400px !important; max-height:400px !important;
+  flex:0 0 400px !important; aspect-ratio:auto !important; padding:0 !important; margin:0 !important;
+  overflow:hidden !important; contain:layout paint !important; isolation:isolate !important;
+}
+#featuredTrack .work-card .thumb img, #featuredTrack .work-card .thumb video,
+#aiVideoTrack .work-card .thumb img, #aiVideoTrack .work-card .thumb video {
+  position:absolute !important; inset:0 !important; display:block !important;
+  width:100% !important; height:100% !important; min-width:0 !important; min-height:0 !important;
+  max-width:100% !important; max-height:100% !important; object-fit:contain !important;
+  object-position:center center !important; margin:0 !important; padding:0 !important;
+}
+#featuredTrack .work-card .work-info, #aiVideoTrack .work-card .work-info {
+  box-sizing:border-box !important; position:relative !important; display:block !important;
+  width:100% !important; height:90px !important; min-height:90px !important; max-height:90px !important;
+  padding:12px !important; overflow:hidden !important;
+}
+#featuredTrack .work-card .work-info p, #aiVideoTrack .work-card .work-info p {
+  display:-webkit-box !important; -webkit-line-clamp:2 !important; -webkit-box-orient:vertical !important; overflow:hidden !important;
+}
+@media (max-width:800px) {
+  #featuredTrack > .work-card, #aiVideoTrack > .work-card,
+  #featuredTrack .work-card, #aiVideoTrack .work-card {
+    width:200px !important; min-width:200px !important; max-width:200px !important;
+    flex:0 0 200px !important; height:445.56px !important; min-height:445.56px !important; max-height:445.56px !important;
+  }
+  #featuredTrack .work-card .thumb, #aiVideoTrack .work-card .thumb {
+    height:355.56px !important; min-height:355.56px !important; max-height:355.56px !important;
+    flex-basis:355.56px !important;
+  }
+  #featuredTrack .work-card .work-info, #aiVideoTrack .work-card .work-info {
+    height:90px !important; min-height:90px !important; max-height:90px !important;
+  }
+}
+
+/* CUSTOM THUMBNAIL SAFETY OVERRIDE: keep supplied thumbnail images fully visible */
+#featuredTrack .work-card .thumb img,
+#aiVideoTrack .work-card .thumb img { object-fit:contain !important; object-position:center center !important; }
+.work-link-wrap{padding:0 15px 14px}
