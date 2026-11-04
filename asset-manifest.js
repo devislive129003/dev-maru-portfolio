@@ -15,7 +15,8 @@ window.PORTFOLIO_ASSETS = {
     "Ai_images_25.jpg",
     "Ai_images_26.jpg",
     "Ai_images_27.jpg",
-    "Ai_images_28.jpg"
+    "Ai_images_28.jpg",
+    "Ai_images_29.png"
   ],
   videos: {
     featured: [
