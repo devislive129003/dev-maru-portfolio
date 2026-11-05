@@ -25,13 +25,13 @@ window.PORTFOLIO_ASSETS = {
       "Show_room_Reel.mp4"
     ],
     aiVideo: [
-      "Ad_Concept_01.mp4",
-      "Ai_Model_Woman.mp4",
-      "AI_product_showcasing_reel.mp4",
-      "Ai_trend.mp4",
-      "Ai_Video_+_ai_song_(Gujarati).mp4",
-      "Creative_Ad_Campain.mp4",
-      "Trending_aI_offers reel.mp4"
+      "AI Fashion Model Walkthrough.mp4",
+      "AI Trend-Based Reels.mp4",
+      "AI-Driven Marketing Reels.mp4",
+      "AI-Generated Product Showcase Videos.mp4",
+      "AI-Powered Retail Experience Campaigns.mp4",
+      "Adobe Express - Brand Story.mp4",
+      "Virtual Model Product Showcases.mp4"
     ]
   }
 };
