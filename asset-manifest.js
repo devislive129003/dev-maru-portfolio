@@ -1,20 +1,7 @@
 window.PORTFOLIO_ASSETS = {
   images: [
-    "Ai_images1.jpg",
-    "Ai_images2.jpg",
-    "Ai_images3.jpg",
-    "Ai_images4.jpg",
     "Ai_images5.jpg",
-    "Ai_images6.jpg",
-    "Ai_images7.jpg",
-    "Ai_images8.jpg",
     "Ai_images_21.jpg",
-    "Ai_images_22.jpg",
-    "Ai_images_23.jpg",
-    "Ai_images_24.jpg",
-    "Ai_images_25.jpg",
-    "Ai_images_26.jpg",
-    "Ai_images_27.jpg",
     "Ai_images_28.jpg",
     "Ai_images_29.png"
   ],
