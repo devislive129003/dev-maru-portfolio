@@ -34,7 +34,7 @@ window.PORTFOLIO_ASSETS = {
       "AI-Driven_Marketing_Reels.mp4",
       "AI-Generated_Product_Showcase_Videos.mp4",
       "AI-Powered_Retail_Experience_Campaigns.mp4",
-      "Adobe_Express_-_Brand_Story.mp4",
+      "Brand_Story.mp4",
       "Virtual_Model_Product_Showcases.mp4"
     ]
   }
