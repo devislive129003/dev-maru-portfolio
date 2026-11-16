@@ -27,7 +27,6 @@ window.PORTFOLIO_ASSETS = {
   "Real_Estate_Promotional_Videos_2.mp4",
   "Real_Estate_Promotional_Videos.mp4",
   "Showroom_Reel.mp4"
-]
     ],
     aiVideo: [
       "AI Fashion Model Walkthrough.mp4",
