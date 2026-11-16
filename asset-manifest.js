@@ -31,9 +31,9 @@ window.PORTFOLIO_ASSETS = {
     aiVideo: [
       "AI_Fashion_Model_Walkthrough.mp4",
       "AI_Trend-Based_Reels.mp4",
-      "AI-Driven_Marketing_Reels.mp4",
-      "AI-Generated_Product_Showcase_Videos.mp4",
-      "AI-Powered_Retail_Experience_Campaigns.mp4",
+      "AI_Driven_Marketing_Reels.mp4",
+      "AI_Generated_Product_Showcase_Videos.mp4",
+      "AI_Powered_Retail_Experience_Campaigns.mp4",
       "Brand_Story.mp4",
       "Virtual_Model_Product_Showcases.mp4"
     ]
