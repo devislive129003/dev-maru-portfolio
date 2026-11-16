@@ -29,13 +29,13 @@ window.PORTFOLIO_ASSETS = {
   "Showroom_Reel.mp4"
     ],
     aiVideo: [
-      "AI Fashion Model Walkthrough.mp4",
-      "AI Trend-Based Reels.mp4",
-      "AI-Driven Marketing Reels.mp4",
-      "AI-Generated Product Showcase Videos.mp4",
-      "AI-Powered Retail Experience Campaigns.mp4",
-      "Adobe Express - Brand Story.mp4",
-      "Virtual Model Product Showcases.mp4"
+      "AI_Fashion_Model_Walkthrough.mp4",
+      "AI_Trend-Based_Reels.mp4",
+      "AI-Driven_Marketing_Reels.mp4",
+      "AI-Generated_Product_Showcase_Videos.mp4",
+      "AI-Powered_Retail_Experience_Campaigns.mp4",
+      "Adobe_Express_-_Brand_Story.mp4",
+      "Virtual_Model_Product_Showcases.mp4"
     ]
   }
 };
