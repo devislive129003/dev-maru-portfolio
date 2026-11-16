@@ -19,14 +19,14 @@ window.PORTFOLIO_ASSETS = {
   ],
   videos: {
     featured: [
-  "AI_Fashion_Model_Campaigns.mp4",
-  "AI_Voiceover_Based_Video_Editing.mp4",
-  "AI_Generated_UGC_Fashion_Videos.mp4",
-  "Car_Delivery_Cinematic_Reel.mp4",
-  "Product_Unboxing_Review_Videos.mp4",
-  "Real_Estate_Promotional_Videos_2.mp4",
-  "Real_Estate_Promotional_Videos.mp4",
-  "Showroom_Reel.mp4"
+   "AI_Fashion_Model_Campaigns.mp4",
+   "AI_Voiceover_Based_Video_Editing.mp4",
+   "AI_Generated_UGC_Fashion_Videos.mp4",
+   "Car_Delivery_Cinematic_Reel.mp4",
+   "Product_Unboxing_Review_Videos.mp4",
+   "Real_Estate_Promotional_Videos_2.mp4",
+   "Real_Estate_Promotional_Videos.mp4",
+   "Showroom_Reel.mp4"
     ],
     aiVideo: [
       "AI_Fashion_Model_Walkthrough.mp4",
