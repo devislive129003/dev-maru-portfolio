@@ -174,3 +174,29 @@ nav{position:sticky;top:0;z-index:10;background:var(--bg)}
 #featuredTrack .work-card .thumb img,
 #aiVideoTrack .work-card .thumb img { object-fit:contain !important; object-position:center center !important; }
 .work-link-wrap{padding:0 15px 14px}
+
+/* Bloom Media cinematic entry */
+body.intro-locked{overflow:hidden}
+#bloomIntro{position:fixed;inset:0;z-index:9999;background:#000;display:grid;place-items:center;overflow:hidden;isolation:isolate}
+#bloomIntro .bloom-intro-copy{position:relative;z-index:5;display:flex;flex-direction:column;align-items:center;gap:17px;transition:opacity .35s ease}
+#bloomIntro .bloom-mark{width:clamp(150px,22vw,270px);aspect-ratio:1;padding:0;border:0;background:transparent;cursor:pointer;filter:drop-shadow(0 0 28px #ee35b966);transition:filter .25s ease}
+#bloomIntro .bloom-mark:hover,#bloomIntro .bloom-mark:focus-visible{filter:drop-shadow(0 0 42px #ff35c9aa);outline:none}
+#bloomIntro .bloom-mark img{width:100%;height:100%;object-fit:contain;display:block}
+#bloomIntro .bloom-wordmark{font-size:clamp(16px,2.2vw,25px);font-weight:800;letter-spacing:.28em;color:#f7f4fa;margin-left:.28em}
+#bloomIntro .bloom-enter{border:0;background:transparent;color:#f4eefa;letter-spacing:.32em;font-size:12px;font-weight:700;padding:14px 18px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:10px}
+#bloomIntro .bloom-enter span{font-size:21px;color:#ec56d7;animation:bloomNudge 1.25s ease-in-out infinite}
+#bloomIntro .bloom-page{position:absolute;z-index:3;top:0;bottom:0;width:50.2%;background:#030305;pointer-events:none;transform:scaleX(0);transition:transform 1.05s cubic-bezier(.72,0,.18,1);box-shadow:0 0 35px #a72bff55}
+#bloomIntro .bloom-page-left{left:0;transform-origin:left center;border-right:1px solid #b94dff55}
+#bloomIntro .bloom-page-right{right:0;transform-origin:right center;border-left:1px solid #ff43c955}
+#bloomIntro .bloom-flash{position:absolute;z-index:4;inset:0;background:radial-gradient(circle at center,#fff 0,#f43edc 3%,#8d32ff 13%,transparent 48%);opacity:0;pointer-events:none}
+#bloomIntro.is-opening .bloom-mark img{animation:bloomSpinZoom 1.55s cubic-bezier(.2,.72,.15,1) forwards}
+#bloomIntro.is-opening .bloom-intro-copy{opacity:0}
+#bloomIntro.is-opening .bloom-page-left,#bloomIntro.is-opening .bloom-page-right{transform:scaleX(1)}
+#bloomIntro.is-opening .bloom-flash{animation:bloomFlash .8s ease-out 1.05s forwards}
+#bloomIntro.is-done{animation:bloomFade .65s ease forwards}
+@keyframes bloomSpinZoom{0%{transform:rotate(0) scale(1)}35%{transform:rotate(260deg) scale(1.45)}70%{transform:rotate(650deg) scale(2.7)}100%{transform:rotate(1080deg) scale(9);opacity:0}}
+@keyframes bloomFlash{0%{opacity:0}35%{opacity:.85}100%{opacity:0}}
+@keyframes bloomFade{to{opacity:0;visibility:hidden;pointer-events:none}}
+@keyframes bloomNudge{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+@media(max-width:600px){#bloomIntro .bloom-mark{width:190px}#bloomIntro .bloom-wordmark{font-size:15px}}
+@media(prefers-reduced-motion:reduce){#bloomIntro *{animation-duration:.01ms!important;transition-duration:.01ms!important}}
