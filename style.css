@@ -200,3 +200,14 @@ body.intro-locked{overflow:hidden}
 @keyframes bloomNudge{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
 @media(max-width:600px){#bloomIntro .bloom-mark{width:190px}#bloomIntro .bloom-wordmark{font-size:15px}}
 @media(prefers-reduced-motion:reduce){#bloomIntro *{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+
+/* Final timing: the two black leaves start closed and retract away from the centre.
+   Keep the logo visible while it spins through the opening. */
+#bloomIntro{background:transparent}
+#bloomIntro .bloom-page{transform:scaleX(1)}
+#bloomIntro.is-opening .bloom-page-left,
+#bloomIntro.is-opening .bloom-page-right{transform:scaleX(0)}
+#bloomIntro.is-opening .bloom-intro-copy{opacity:1}
+#bloomIntro.is-opening .bloom-wordmark,
+#bloomIntro.is-opening .bloom-enter{opacity:0;transition:opacity .25s ease}
