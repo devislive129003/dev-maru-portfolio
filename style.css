@@ -225,3 +225,59 @@ body.intro-locked{overflow:hidden}
 #bloomIntro .bloom-page-right{transform-origin:left center}
 #bloomIntro.is-opening .bloom-page-left{transform:perspective(1200px) rotateY(-108deg)}
 #bloomIntro.is-opening .bloom-page-right{transform:perspective(1200px) rotateY(108deg)}
+
+
+/* Remove the opaque black image tile: show only the coloured cutout artwork */
+#bloomIntro .bloom-mark{
+  position:relative;
+  background:transparent!important;
+  box-shadow:none!important;
+  filter:none!important;
+  overflow:visible;
+}
+#bloomIntro .bloom-mark::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:-34%;
+  border-radius:50%;
+  background:radial-gradient(ellipse at center,
+    rgba(255,55,190,.34) 0%,
+    rgba(177,44,255,.22) 38%,
+    rgba(177,44,255,.08) 57%,
+    transparent 74%);
+  filter:blur(20px);
+  opacity:.72;
+  transform:scale(.96);
+  animation:bloomLogoAura 2.8s ease-in-out infinite;
+  pointer-events:none;
+}
+#bloomIntro .bloom-mark:hover,
+#bloomIntro .bloom-mark:focus-visible{
+  filter:none!important;
+  outline:none;
+}
+#bloomIntro .bloom-mark:hover::before,
+#bloomIntro .bloom-mark:focus-visible::before{
+  opacity:1;
+  transform:scale(1.08);
+}
+#bloomIntro .bloom-mark img{
+  position:relative;
+  z-index:1;
+  background:transparent!important;
+  mix-blend-mode:screen;
+  filter:none!important;
+}
+#bloomIntro .bloom-page-left,
+#bloomIntro .bloom-page-right{
+  border:0!important;
+  box-shadow:none!important;
+}
+@keyframes bloomLogoAura{
+  0%,100%{opacity:.56;transform:scale(.94)}
+  50%{opacity:1;transform:scale(1.07)}
+}
+@media(prefers-reduced-motion:reduce){
+  #bloomIntro .bloom-mark::before{animation:none;opacity:.8}
+}
