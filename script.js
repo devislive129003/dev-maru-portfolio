@@ -134,24 +134,51 @@ document.addEventListener("keydown",e=>{if(e.key!=="Enter"&&e.key!==" ")return;c
 document.addEventListener("error",e=>{const image=e.target;if(!(image instanceof HTMLImageElement))return;image.classList.add("hidden");if(image.dataset.imageFallback==="placeholder"){const placeholder=document.createElement("div");placeholder.className="placeholder";placeholder.innerHTML='PLAY<span class="accent-period">.</span>';image.parentElement.insertBefore(placeholder,image)}},true);
 render();
 
-/* Bloom Media entry interaction */
+/* Bloom Media entry interaction — logo launch, letter scatter, then card-sheet reveal */
 (function(){
   const intro=document.getElementById("bloomIntro");
   const trigger=document.getElementById("bloomEnter");
   const logo=document.getElementById("bloomMark");
   if(!intro||!trigger||!logo)return;
+
   document.body.classList.add("intro-locked");
+  const words=(trigger.textContent||"CLICK THE BLOOM").trim();
+  trigger.setAttribute("aria-label",words);
+  trigger.replaceChildren();
+
+  const chars=[...words];
+  const middle=(chars.length-1)/2;
+  chars.forEach((char,index)=>{
+    const letter=document.createElement("span");
+    letter.className="bloom-letter";
+    letter.setAttribute("aria-hidden","true");
+    letter.textContent=char===" "?"\u00a0":char;
+    const offset=index-middle;
+    const sign=offset<0?-1:1;
+    letter.style.setProperty("--dx",`${(offset*4.1).toFixed(1)}vw`);
+    letter.style.setProperty("--dy",`${((index%2===0?-1:1)*(8+Math.abs(offset)*1.25)).toFixed(1)}vh`);
+    letter.style.setProperty("--turn",`${sign*(440+index*13)}deg`);
+    letter.style.setProperty("--delay",`${index*28}ms`);
+    trigger.appendChild(letter);
+  });
+
   let started=false;
   function enter(){
     if(started)return;
     started=true;
-    intro.classList.add("is-opening");
+    intro.classList.add("is-launching");
+
+    // Let the logo finish its spin/zoom and leave the camera before opening the sheets.
     window.setTimeout(()=>{
-      intro.classList.add("is-done");
-      document.body.classList.remove("intro-locked");
-      window.setTimeout(()=>intro.remove(),700);
+      intro.classList.add("is-pages-opening");
+      window.setTimeout(()=>{
+        intro.classList.add("is-done");
+        document.body.classList.remove("intro-locked");
+        window.setTimeout(()=>intro.remove(),700);
+      },1450);
     },2450);
   }
+
   trigger.addEventListener("click",enter);
   logo.addEventListener("click",enter);
 })();
