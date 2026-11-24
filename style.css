@@ -292,3 +292,47 @@ body.intro-locked{overflow:hidden}
   mix-blend-mode:normal!important;
   object-fit:contain;
 }
+
+
+/* Bloom launch: the logo starts with a gentle turn, then accelerates
+   toward the camera and scales beyond the viewport before the reveal. */
+#bloomIntro .bloom-mark{
+  position:relative;
+  z-index:6;
+  overflow:visible;
+  transform:none;
+}
+#bloomIntro.is-opening .bloom-mark img{
+  transform-origin:50% 50%;
+  transform-style:preserve-3d;
+  backface-visibility:hidden;
+  will-change:transform,opacity;
+  animation:bloomCameraLaunch 2.2s linear forwards!important;
+}
+#bloomIntro.is-opening .bloom-mark::before{
+  will-change:transform,opacity;
+  animation:bloomAuraLaunch 2.2s linear forwards;
+}
+@keyframes bloomCameraLaunch{
+  0%   {transform:perspective(900px) rotate(0deg) scale(1);opacity:1}
+  20%  {transform:perspective(900px) rotate(18deg) scale(1.06);opacity:1}
+  40%  {transform:perspective(900px) rotate(110deg) scale(1.35);opacity:1}
+  60%  {transform:perspective(900px) rotate(410deg) scale(2.6);opacity:1}
+  80%  {transform:perspective(900px) rotate(970deg) scale(6.5);opacity:1}
+  93%  {transform:perspective(900px) rotate(1580deg) scale(13);opacity:.9}
+  100% {transform:perspective(900px) rotate(2250deg) scale(22);opacity:0}
+}
+@keyframes bloomAuraLaunch{
+  0%{opacity:.72;transform:scale(.96)}
+  35%{opacity:.9;transform:scale(1.18)}
+  65%{opacity:.62;transform:scale(2.1)}
+  88%{opacity:.28;transform:scale(7)}
+  100%{opacity:0;transform:scale(15)}
+}
+@media(prefers-reduced-motion:reduce){
+  #bloomIntro.is-opening .bloom-mark img{
+    animation:none!important;
+    opacity:0;
+  }
+  #bloomIntro.is-opening .bloom-mark::before{animation:none;opacity:0}
+}
