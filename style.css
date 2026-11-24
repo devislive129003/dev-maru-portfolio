@@ -211,3 +211,17 @@ body.intro-locked{overflow:hidden}
 #bloomIntro.is-opening .bloom-intro-copy{opacity:1}
 #bloomIntro.is-opening .bloom-wordmark,
 #bloomIntro.is-opening .bloom-enter{opacity:0;transition:opacity .25s ease}
+
+
+/* Book-like centre hinge: both black leaves swing away in 3D */
+#bloomIntro{perspective:1600px}
+#bloomIntro .bloom-page{
+  transform:perspective(1200px) rotateY(0deg);
+  backface-visibility:hidden;
+  transform-style:preserve-3d;
+  transition:transform 1.15s cubic-bezier(.72,0,.18,1);
+}
+#bloomIntro .bloom-page-left{transform-origin:right center}
+#bloomIntro .bloom-page-right{transform-origin:left center}
+#bloomIntro.is-opening .bloom-page-left{transform:perspective(1200px) rotateY(-108deg)}
+#bloomIntro.is-opening .bloom-page-right{transform:perspective(1200px) rotateY(108deg)}
