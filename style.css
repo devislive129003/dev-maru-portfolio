@@ -281,3 +281,14 @@ body.intro-locked{overflow:hidden}
 @media(prefers-reduced-motion:reduce){
   #bloomIntro .bloom-mark::before{animation:none;opacity:.8}
 }
+
+
+/* Use the alpha channel of the transparent logo directly */
+#bloomIntro .bloom-mark,
+#bloomIntro .bloom-mark img{
+  background:transparent!important;
+}
+#bloomIntro .bloom-mark img{
+  mix-blend-mode:normal!important;
+  object-fit:contain;
+}
