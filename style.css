@@ -493,3 +493,21 @@ body.intro-locked{overflow:hidden}
   #bloomIntro.is-launching .bloom-letter,
   #bloomIntro.is-launching .bloom-mark::before{animation-duration:.01ms!important}
 }
+
+
+/* The currently published transparent PNG is 192px; render at native resolution
+   until the full-resolution source asset is published, avoiding artificial blur. */
+#bloomIntro .bloom-mark{
+  width:192px;
+  height:192px;
+  aspect-ratio:1 / 1;
+}
+#bloomIntro .bloom-mark img{
+  width:100%;
+  height:100%;
+  aspect-ratio:1 / 1;
+  object-fit:contain;
+}
+@media(max-width:600px){
+  #bloomIntro .bloom-mark{width:min(68vw,192px);height:auto}
+}
