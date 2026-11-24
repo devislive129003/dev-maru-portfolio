@@ -133,3 +133,25 @@ document.addEventListener("click",e=>{const card=e.target.closest(".work-card-cl
 document.addEventListener("keydown",e=>{if(e.key!=="Enter"&&e.key!==" ")return;const card=e.target.closest(".work-card-click[data-video-url]");if(!card)return;e.preventDefault();openProjectVideo(encodeURIComponent(card.dataset.videoUrl),encodeURIComponent(card.dataset.videoTitle))});
 document.addEventListener("error",e=>{const image=e.target;if(!(image instanceof HTMLImageElement))return;image.classList.add("hidden");if(image.dataset.imageFallback==="placeholder"){const placeholder=document.createElement("div");placeholder.className="placeholder";placeholder.innerHTML='PLAY<span class="accent-period">.</span>';image.parentElement.insertBefore(placeholder,image)}},true);
 render();
+
+/* Bloom Media entry interaction */
+(function(){
+  const intro=document.getElementById("bloomIntro");
+  const trigger=document.getElementById("bloomEnter");
+  const logo=document.getElementById("bloomMark");
+  if(!intro||!trigger||!logo)return;
+  document.body.classList.add("intro-locked");
+  let started=false;
+  function enter(){
+    if(started)return;
+    started=true;
+    intro.classList.add("is-opening");
+    window.setTimeout(()=>{
+      intro.classList.add("is-done");
+      document.body.classList.remove("intro-locked");
+      window.setTimeout(()=>intro.remove(),700);
+    },2450);
+  }
+  trigger.addEventListener("click",enter);
+  logo.addEventListener("click",enter);
+})();
