@@ -511,3 +511,21 @@ body.intro-locked{overflow:hidden}
 @media(max-width:600px){
   #bloomIntro .bloom-mark{width:min(68vw,192px);height:auto}
 }
+
+
+/* High resolution transparent Bloom artwork: display within its native crop ratio. */
+#bloomIntro .bloom-mark{
+  width:clamp(240px,31vw,390px)!important;
+  height:auto!important;
+  aspect-ratio:397 / 415!important;
+}
+#bloomIntro .bloom-mark img{
+  display:block;
+  width:100%!important;
+  height:auto!important;
+  aspect-ratio:397 / 415!important;
+  object-fit:contain;
+}
+@media(max-width:600px){
+  #bloomIntro .bloom-mark{width:min(76vw,360px)!important}
+}
