@@ -336,3 +336,160 @@ body.intro-locked{overflow:hidden}
   }
   #bloomIntro.is-opening .bloom-mark::before{animation:none;opacity:0}
 }
+
+
+/* FINAL BLOOM INTRO — sharp centred mark, expanding letters, then hinged card reveal */
+#bloomIntro{
+  background:#000!important;
+  perspective:1600px;
+  overflow:hidden;
+  isolation:isolate;
+}
+#bloomIntro .bloom-intro-copy{
+  z-index:6;
+  opacity:1;
+  transition:opacity .18s ease;
+}
+#bloomIntro .bloom-mark{
+  width:clamp(230px,31vw,390px);
+  height:auto;
+  aspect-ratio:397 / 415;
+  padding:0;
+  border:0;
+  background:transparent!important;
+  box-shadow:none!important;
+  filter:none!important;
+  overflow:visible;
+  position:relative;
+  z-index:8;
+  cursor:pointer;
+}
+#bloomIntro .bloom-mark img{
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:397 / 415;
+  object-fit:contain;
+  background:transparent!important;
+  mix-blend-mode:normal!important;
+  filter:drop-shadow(0 0 25px rgba(226,54,226,.12));
+  transform-origin:50% 50%;
+}
+#bloomIntro .bloom-enter{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:center;
+  gap:0;
+  padding:15px 18px;
+  margin:0;
+  border:0;
+  background:transparent;
+  white-space:pre;
+  letter-spacing:0;
+  overflow:visible;
+  z-index:7;
+}
+#bloomIntro .bloom-letter{
+  display:inline-block;
+  position:relative;
+  color:#f4eefa;
+  font-size:12px;
+  line-height:1;
+  font-weight:800;
+  letter-spacing:.24em;
+  padding:0;
+  white-space:pre;
+  transform:translate3d(0,0,0) rotate(0deg) scale(1);
+  transform-origin:50% 50%;
+  will-change:transform,opacity;
+}
+#bloomIntro .bloom-page{
+  z-index:3;
+  top:0;
+  bottom:0;
+  width:50.2%;
+  height:100%;
+  border:0!important;
+  box-shadow:none!important;
+  pointer-events:none;
+  background:linear-gradient(90deg,#000 0%,#030205 70%,#100818 100%);
+  transform:perspective(1600px) rotateY(0deg);
+  transform-style:preserve-3d;
+  backface-visibility:hidden;
+  transition:transform 1.4s cubic-bezier(.72,0,.18,1);
+  will-change:transform;
+}
+#bloomIntro .bloom-page-left{
+  left:0;
+  right:auto;
+  transform-origin:right center;
+}
+#bloomIntro .bloom-page-right{
+  right:0;
+  left:auto;
+  transform-origin:left center;
+  background:linear-gradient(270deg,#000 0%,#030205 70%,#100818 100%);
+}
+#bloomIntro .bloom-page-left::after,
+#bloomIntro .bloom-page-right::after{
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  width:1px;
+  background:rgba(255,255,255,.055);
+  pointer-events:none;
+}
+#bloomIntro .bloom-page-left::after{right:0}
+#bloomIntro .bloom-page-right::after{left:0}
+
+/* Spin velocity and camera scale build rapidly so the logo exits the screen */
+#bloomIntro.is-launching .bloom-mark img{
+  animation:bloomLogoCameraLaunch 2.45s linear forwards!important;
+  will-change:transform,opacity;
+}
+#bloomIntro.is-launching .bloom-mark::before{
+  animation:bloomAuraLaunch 2.45s ease-in forwards;
+  will-change:transform,opacity;
+}
+#bloomIntro.is-launching .bloom-letter{
+  animation:bloomLetterBurst 1.45s cubic-bezier(.12,.82,.18,1) forwards;
+  animation-delay:var(--delay,0ms);
+}
+
+/* The portfolio is covered until this second phase starts */
+#bloomIntro.is-pages-opening .bloom-intro-copy{
+  opacity:0;
+  pointer-events:none;
+}
+#bloomIntro.is-pages-opening .bloom-page-left{
+  transform:perspective(1600px) rotateY(-116deg) translateZ(38px);
+}
+#bloomIntro.is-pages-opening .bloom-page-right{
+  transform:perspective(1600px) rotateY(116deg) translateZ(38px);
+}
+@keyframes bloomLogoCameraLaunch{
+  0%{transform:perspective(900px) rotate(0deg) scale(1);opacity:1}
+  18%{transform:perspective(900px) rotate(14deg) scale(1.08);opacity:1}
+  38%{transform:perspective(900px) rotate(115deg) scale(1.55);opacity:1}
+  58%{transform:perspective(900px) rotate(430deg) scale(3.8);opacity:1}
+  76%{transform:perspective(900px) rotate(1080deg) scale(9);opacity:1}
+  91%{transform:perspective(900px) rotate(2100deg) scale(22);opacity:.88}
+  100%{transform:perspective(900px) rotate(2880deg) scale(38);opacity:0}
+}
+@keyframes bloomLetterBurst{
+  0%{transform:translate3d(0,0,0) rotate(0deg) scale(1);opacity:1;filter:blur(0)}
+  18%{opacity:1}
+  100%{transform:translate3d(var(--dx),var(--dy),0) rotate(var(--turn)) scale(.16);opacity:0;filter:blur(2px)}
+}
+@media(max-width:600px){
+  #bloomIntro .bloom-mark{width:min(76vw,350px)}
+  #bloomIntro .bloom-letter{font-size:11px;letter-spacing:.18em}
+  #bloomIntro .bloom-enter{padding:14px 10px}
+}
+@media(prefers-reduced-motion:reduce){
+  #bloomIntro.is-launching .bloom-mark img,
+  #bloomIntro.is-launching .bloom-letter,
+  #bloomIntro.is-launching .bloom-mark::before{animation-duration:.01ms!important}
+}
